@@ -1,10 +1,10 @@
 <?php
 
 function conectaDB() : mysqli {
-    $db = new mysqli('localhost', 'root', 'root', 'sistema_reporte_mobiliario');
+    $db = new mysqli('localhost', 'root', '', 'sistema_reporte_mobiliario1');
 
     if(!$db) {
-        echo "Erro";
+        echo "Error";
         exit;
         
     }else {
