@@ -1,2 +1,9 @@
 body {background-color:#133e35; }
 #card{--bs-bg-opacity: .5; }
+
+#txt1{
+    color: white;
+    font-family: monospace;
+     
+    
+}
