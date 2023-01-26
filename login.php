@@ -47,7 +47,7 @@ include 'includes/app.php';
           <div class="col-md-3"></div>
           <div id="card" class="col-md-6 col-sm-10 col-xs-12 shadow-lg p-5 mt-5 bg-body rounded">
             <form method="post" action="">
-              <div class="mb-3 row text-center">
+              <div class="mb-3 row text-center ">
                   <h1 id="txt1">Inicio de Sesión</h1>
               </div>
               <div class="mb-3 mt-5 row">
