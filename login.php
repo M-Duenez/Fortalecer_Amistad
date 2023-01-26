@@ -51,9 +51,9 @@ include 'includes/app.php';
                   <h1 id="txt1">Inicio de Sesión</h1>
               </div>
               <div class="mb-3 mt-5 row">
-                  <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                  <label for="staticEmail" class="col-sm-2 col-form-label">Usuario</label>
                   <div class="col-sm-10">
-                    <input  name="username" type="text" class="form-control" id="staticEmail" placeholder="email@example.com">
+                    <input  name="username" type="text" class="form-control" id="staticEmail" placeholder="user">
                   </div>
                 </div>
                 <div class="mb-3 row">
