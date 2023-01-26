@@ -1,3 +1,10 @@
+<?php
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+    $auth = $_SESSION['login'] ?? false;
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +29,11 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <?php if($auth): ?>
+                                    <a class="nav-link dropdown-toggle" href="cerrar-sesion.php">Cerrar Sesión</a>
+                                    <?php else: ?>
+                                        <a class="nav-link dropdown-toggle" style="text-decoration: none;" href="login.php">Iniciar Sesión</a>
+                                <?php endif; ?>
                                 </li>
                                 <li class="nav-item">
                                 <a class="nav-link" href="#">Link</a>
