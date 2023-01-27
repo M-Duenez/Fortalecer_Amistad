@@ -1,2 +1,26 @@
-body {background-color:#3929eb; }
-#card{--bs-bg-opacity: .5; }
+body1 {
+    background: linear-gradient(to bottom right, #6ea8fe, #0d6efd, #084298, #031633);
+}
+body {
+    background: linear-gradient(to bottom right,#d1e7dd, #75b798, #198754, #0f5132, #051b11);
+}
+body2 {
+    background: radial-gradient(#031633 30%,#084298 20%,#0d6efd 20%,#6ea8fe 10%);
+}
+#card{
+    background-color: black;
+    --bs-bg-opacity: .15;
+}
+
+.txt1{
+    font-family:monospace;
+    color: white;
+
+}
+
+.txt2{
+    font-family:monospace;
+    color: white;
+    font-size: 25px;
+
+}
