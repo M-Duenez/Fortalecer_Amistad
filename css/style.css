@@ -7,6 +7,12 @@ body {
 body2 {
     background: radial-gradient(#031633 30%,#084298 20%,#0d6efd 20%,#6ea8fe 10%);
 }
+
+
+.imagen {
+    width: 30rem;
+    height: 30rem;
+}
 #card{
     background-color: black;
     --bs-bg-opacity: .15;
