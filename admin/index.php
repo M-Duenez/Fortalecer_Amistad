@@ -8,7 +8,7 @@
         header('Location: /');
     }
     $db = conectaDB();
-    $query = "SELECT * FROM users";
+    $query = "SELECT * FROM users WHERE username <> 'admin'";
     $resultado = mysqli_query($db, $query);
     // $resultado = $_GET['resultado'] ?? null;
     
@@ -21,36 +21,16 @@
     //     }
     // }
 ?>
-<link rel="stylesheet" href="./css/style.css">
+<!-- <link rel="stylesheet" href="./css/style.css"> -->
 <body>
     <main>
         <h1>Lista de Usuarios</h1>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php while( $usuarios = mysqli_fetch_assoc($resultado)): ?>
-            <tr>
-                <td><?php echo $usuarios['fullname']; ?></td>
-                <td><?php echo $usuarios['username']; ?></td>
-            </tr>
-        <?php endwhile; ?>
-    </tbody>
-</table>
-
-        
-        <table>
+        <table class="table">
             <thead>
                 <tr>
-                    <th>Nombre Completo</th>
-                    <th>Username</th>
+                    <th scope="col">Nombre Completo</th>
+                    <th scope="col">Clave de Usuario</th>
                 </tr>
             </thead>
             <tbody>
@@ -62,5 +42,8 @@
                 <?php endwhile; ?>
             </tbody>
         </table>
+
+        
+
     </main>    
 </body>

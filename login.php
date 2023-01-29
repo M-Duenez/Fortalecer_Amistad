@@ -2,26 +2,44 @@
 include 'includes/app.php';
     $db = conectaDB();
 
+    $errores = [];
+
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
       $username = $_POST['username'];
       $password = $_POST['password'];
 
-      $query = "SELECT * FROM usuarios WHERE username = '{$username}'";
-      $resultado = mysqli_query($db, $query);
+      if (!$username) {
+        $errores[] = "Usuario Obligatori";
+      }
 
-      if ($resultado->num_rows) {
-        $username = mysqli_fetch_assoc($resultado);
+      if (!$password) {
+        $errores[] = "Contraseña incorrecta";
+      }
 
-        $auth = password_verify($password, $username['password']);
-        if ($auth) {
-          session_start();
+      if (empty($errores)) {
+          $query = "SELECT * FROM users WHERE username = '{$username}'";
+          $resultado = mysqli_query($db, $query);
+         
 
-          $_SESSION['username'] = $username['username'];
-          $_SESSION['login'] = true;
-          header('Location: /admin');
-        }
+    
+    
+          if ($resultado->num_rows) {
+            $username = mysqli_fetch_assoc($resultado);
+            
+    
+            $auth = password_verify($password, $username['password']);
+            var_dump($auth);
+            if ($auth) {
+              session_start();
+    
+              $_SESSION['username'] = $username['username'];
+              $_SESSION['login'] = true;
+              
+              header('Location: /admin');
+            }
+          }
       }
     }
 
@@ -46,6 +64,11 @@ include 'includes/app.php';
         <div class="row">
           <div class="col-md-3"></div>
           <div id="card" class="col-md-6 col-sm-10 col-xs-12 shadow-lg p-5 mt-5 bg-body rounded">
+            <?php foreach( $errores as $error ): ?>
+                <div>
+                  <?php echo $error;?>
+                </div>
+            <?php endforeach; ?>
             <form method="post" action="">
               <div class="mb-3 row text-center ">
                   <h1 class="txt1">Inicio de Sesión</h1>
