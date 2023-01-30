@@ -1,7 +1,7 @@
-body1 {
+.body {
     background: linear-gradient(to bottom right, #6ea8fe, #0d6efd, #084298, #031633);
 }
-body {
+body1 {
     background: linear-gradient(to bottom right,#d1e7dd, #75b798, #198754, #0f5132, #051b11);
 }
 body2 {
@@ -10,8 +10,8 @@ body2 {
 
 
 .imagen {
-    width: 30rem;
-    height: 30rem;
+    width: 38rem;
+    height: 20rem;
 }
 #card{
     background-color: black;
@@ -30,3 +30,62 @@ body2 {
     font-size: 25px;
 
 }
+
+.background-radial-gradient {
+    background-color: hsl(0, 0%, 80%);
+    background-image: radial-gradient(650px circle at 0% 0%,
+        hsl(0, 0%, 75%) 15%,
+        hsl(0, 0%, 70%) 35%,
+        hsl(0, 0%, 60%) 75%,
+        hsl(0, 0%, 59%) 80%,
+        transparent 100%),
+      radial-gradient(1250px circle at 100% 100%,
+        hsl(0, 0%, 85%) 15%,
+        hsl(0, 0%, 70%) 35%,
+        hsl(0, 0%, 60%) 75%,
+        hsl(0, 0%, 59%) 80%,
+        transparent 100%);
+  }
+
+  #radius-shape-1 {
+    height: 220px;
+    width: 220px;
+    top: -60px;
+    left: -100px;
+    background: radial-gradient(#0f5132, #75b798);
+    overflow: hidden;
+  }
+
+  #radius-shape-2 {
+    border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+    bottom: -60px;
+    right: -110px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(#0f5132, #75b798);
+    overflow: hidden;
+  }
+
+  #radius-shape-3 {
+    height: 220px;
+    width: 220px;
+    top: 420px;
+    left: -730px;
+    background: radial-gradient( #0f5132, #75b798);
+    overflow: hidden;
+  }
+
+  #radius-shape-4 {
+    border-radius: 37% 63% 72% 38% / 30% 67% 33% 70%;
+    top: -90px;
+    left: -730px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(#0f5132, #75b798);
+    overflow: hidden;
+  }
+
+  .bg-glass {
+    background-color: hsla(0, 0%, 100%, 0.7) !important;
+    backdrop-filter: saturate(200%) blur(25px);
+  }
