@@ -24,7 +24,8 @@
 <!-- <link rel="stylesheet" href="./css/style.css"> -->
 <body>
     <main>
-        <h1>Lista de Usuarios</h1>
+        <div class="container">
+            <h1>Lista de Usuarios</h1>
 
         <table class="table">
             <thead>
@@ -42,8 +43,7 @@
                 <?php endwhile; ?>
             </tbody>
         </table>
-
-        
+        </div>
 
     </main>    
 </body>
