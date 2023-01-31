@@ -2,7 +2,7 @@
     include '../includes/app.php';
     include '../includes/templates/header.php';
     require '../includes/funciones.php';
-    $auth = estaAutenticado();
+    //$auth = estaAutenticado();
     
     if(!$auth) {
         header('Location: /');
