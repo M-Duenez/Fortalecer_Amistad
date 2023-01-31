@@ -66,8 +66,8 @@ include 'includes/app.php';
       <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
         <div class="row gx-lg-5 align-items-center mb-5">
           <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
-          <div align="center">
-                <img class="imagen" src="img/logo.png" alt="">
+            <div align="left">
+                <img  class="imagen" src="img/logo2.png" alt="">
             </div>
           </div>
 
