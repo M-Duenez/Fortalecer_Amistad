@@ -8,11 +8,48 @@ body2 {
     background: radial-gradient(#031633 30%,#084298 20%,#0d6efd 20%,#6ea8fe 10%);
 }
 
-
 .imagen {
-    width: 38rem;
-    height: 20rem;
+  display: block;
+  width: 105%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
+@media (max-width: 575.98px) {
+  .imagen-sm {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .imagen-md {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .imagen-lg {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .imagen-xl {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 #card{
     background-color: black;
     --bs-bg-opacity: .15;
@@ -24,11 +61,16 @@ body2 {
     font-size: 50px;
 
 }
-
 .txt2{
     font-family:monospace;
     color: white;
     font-size: 18px;
+
+}
+.txt3{
+  font-family:monospace;
+  color: white;
+  font-size: 30px;
 
 }
 
