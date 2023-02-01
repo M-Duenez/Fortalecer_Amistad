@@ -7,6 +7,18 @@ body1 {
 body2 {
     background: radial-gradient(#031633 30%,#084298 20%,#0d6efd 20%,#6ea8fe 10%);
 }
+.color-fondo{
+  background-color: #0f5132;
+}
+
+.icono{
+  width: 45px;
+  height: 45px;
+}
+.imagen2{
+  width: 38rem;
+  height: 30rem;
+}
 
 .imagen {
   display: block;
@@ -69,8 +81,8 @@ body2 {
 }
 .txt3{
   font-family:monospace;
-  color: white;
-  font-size: 30px;
+  color: black;
+  font-size: 35px;
 
 }
 
