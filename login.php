@@ -21,8 +21,6 @@ include 'includes/app.php';
       if (empty($errores)) {
           $query = "SELECT * FROM users WHERE username = '{$username}'";
           $resultado = mysqli_query($db, $query);
-         
-
     
     
           if ($resultado->num_rows) {

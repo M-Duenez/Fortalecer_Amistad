@@ -39,6 +39,7 @@
                     <tr>
                         <td><?php echo $usuarios['fullname']; ?></td>
                         <td><?php echo $usuarios['username']; ?></td>
+                        <td><a href="/admin/user_info.php?id=<?php echo $usuarios['id'] ?>" class="boton-amarillo-block">Ver Información</a></td>
                     </tr>
                 <?php endwhile; ?>
             </tbody>
