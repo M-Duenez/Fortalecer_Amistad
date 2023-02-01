@@ -28,7 +28,7 @@ include 'includes/app.php';
             
     
             $auth = password_verify($password, $username['password']);
-            var_dump($auth);
+            
             if ($auth) {
               session_start();
     

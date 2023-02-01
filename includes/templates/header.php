@@ -32,10 +32,13 @@
                         </li>
                         <li class="mx-auto d-block">
                             <a href="/admin" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
-                                <div align="center">
-                                    <img class="icono" src="img/area.svg" alt="" >
+                                <?php if($auth): ?>
+                                    <div align="center">
+                                        <img class="icono" src="img/area.svg" alt="" >
+                                    </div>    
+                                    
                                     <!--<span class="ps-2 align-items-center">INICIO</span>-->
-                                </div>
+                                <?php endif; ?>
                             </a>
                         </li>
                     </ul>
@@ -48,7 +51,11 @@
                             </div>
                         </a>
                         <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
-                            <li><a class="dropdown-item"  href="cerrar-sesion.php">Cerrar Sesion</a></li>
+                            <?php if($auth): ?>
+                                <li><a class="dropdown-item"  href="cerrar-sesion.php">Cerrar Sesion</a></li>
+                                <?php else: ?>
+                                    <li><a class="dropdown-item"  href="login.php">Iniciar Sesion</a></li>
+                                <?php endif; ?>
 
                         </ul>
                     </div>
