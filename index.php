@@ -8,7 +8,9 @@ if (!isset($_SESSION)) {
     session_start();
 }
 $auth = $_SESSION['login'] ?? false;
-$eleccion = 'inicio';
+$resultado = $_GET['resultado'] ?? null;
+
+
 ?>
 
 
@@ -34,7 +36,7 @@ $eleccion = 'inicio';
         <h1 class="pt-2  d-none d-sm-inline txt3">MENU</h1>
         <ul class=" pt-2 nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center justify-content-between w-100 px-3 align-items-center">
             <li class="nav-item">
-                <a href="/" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+                <a href="/?resultado=1" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
                     <div align="center">
                         <img class="icono" src="img/house.svg" alt="">
                         <!--<span class="ps-2 align-items-center">INICIO</span>-->
@@ -44,10 +46,9 @@ $eleccion = 'inicio';
             </li>
             <br>
             <li class="mx-auto d-block">
-                <a href="/admin" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+                <a href="/?resultado=2" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
                         <div align="center">
                             <img class="icono" src="img/area.svg" alt="">
-                            <?php $eleccion = 'area'; ?>
                         </div>
                         <!--<span class="ps-2 align-items-center">INICIO</span>-->
                 </a>
@@ -72,9 +73,9 @@ $eleccion = 'inicio';
             </ul>
         </div>
     </div>
-</div>      <?php if ($eleccion === 'area') : ?>
-                <h1>hola mundo</h1>
-            <?php else : ?>
+</div>      <?php if(intval($resultado) === 1): ?>
+                <h1>HOLA</h1>
+            <?php elseif(intval($resultado) === 2): ?>
                 <?php include 'includes/templates/admin/index.php'; ?>
             <?php endif; ?>
         </div>
