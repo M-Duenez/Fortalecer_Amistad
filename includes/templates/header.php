@@ -13,6 +13,7 @@
                                 </div>
                             </a>
                         </li>
+                        <br>
                         <li class="mx-auto d-block">
                             <a href="/admin" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
                                 <?php if($auth): ?>

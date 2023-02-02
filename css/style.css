@@ -11,9 +11,11 @@ body2 {
     background: radial-gradient(#031633 30%,#084298 20%,#0d6efd 20%,#6ea8fe 10%);
 }
 .color-fondo{
-  background-color: #0f5132;
+  background-color: #dddddd;
 }
-
+footer {
+  display: block;
+}
 .icono{
   width: 45px;
   height: 45px;
