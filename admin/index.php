@@ -1,9 +1,9 @@
 <?php
-    include '../includes/app.php';
+    //include '../includes/app.php';
 
     require '../includes/funciones.php';
     //$auth = estaAutenticado();
-    include '../includes/templates/header.php';
+    //include '../includes/templates/header.php';
     if(!$auth) {
         header('Location: /');
     }
@@ -28,7 +28,7 @@
     
 ?>
 <!-- <link rel="stylesheet" href="./css/style.css"> -->
-<body style="margin-top: 0px;"">
+<body>
     <main>
         <div class="container">
             <h1>Lista de Usuarios</h1>
