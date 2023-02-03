@@ -8,6 +8,8 @@ if (!isset($_SESSION)) {
     session_start();
 }
 $auth = $_SESSION['login'] ?? false;
+
+
 $resultado = $_GET['resultado'] ?? null;
 
 
@@ -17,6 +19,8 @@ $resultado = $_GET['resultado'] ?? null;
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,8 +29,6 @@ $resultado = $_GET['resultado'] ?? null;
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
-<body class="body">
 
     <div class="container-fluid ">
         <div class="row flex-nowrap">
@@ -74,9 +76,10 @@ $resultado = $_GET['resultado'] ?? null;
         </div>
     </div>
 </div>      <?php if(intval($resultado) === 1): ?>
-                <h1>HOLA</h1>
-            <?php elseif(intval($resultado) === 2): ?>
                 <?php include 'includes/templates/admin/index.php'; ?>
+            <?php elseif(intval($resultado) === 2): ?>
+                <h1>dfdsfs</h1>
+        </div>
             <?php endif; ?>
         </div>
     </div>

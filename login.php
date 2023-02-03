@@ -35,7 +35,7 @@ include 'includes/app.php';
               $_SESSION['username'] = $username['username'];
               $_SESSION['login'] = true;
               
-              header('Location: /admin');
+              header('Location: /?resultado=1');
             }
           }
       }

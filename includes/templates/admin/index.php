@@ -62,8 +62,41 @@ $resultado = mysqli_query($db, $query);
                                 <td><?php echo $usuarios['fullname']; ?></td>
                                 <td><?php echo $usuarios['area']; ?></td>
                                 <td>
-                                    <a href="/admin/user_info.php?id=<?php echo $usuarios['id'] ?>" class="btn btn-outline-success">Ver Información</a>
+                                    <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop<?php echo $usuarios['id']; ?>" href="#">Ver Información</a>
                                 </td>
+                                    <td>
+                                                
+                                        <div class="modal fade" id="staticBackdrop<?php echo $usuarios['id']; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Informacion de <?php echo $usuarios['fullname']; ?></h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <table class="table table-bordered">
+                                                            <tbody>
+                                                                <thead>
+                                                                    <td>Area</td>
+                                                                    <td>Nombre</td>
+                                                                </thead>
+                                                                <tr>
+                                                                    <td><?php echo $usuarios['area']; ?></td>
+                                                                    <td><?php echo $usuarios['fullname']; ?></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
                             </tr>
                         <?php endwhile; ?>
                     </tbody>
