@@ -11,7 +11,12 @@ $db = conectaDB();
 
 // '
 // $query = "SELECT * FROM users join  WHERE username <> 'admin'";
-$query = "SELECT users.id, users.fullname, areas.area FROM users left join areas on areas.id = users.fk_area WHERE username <> 'admin'";
+$query = "SELECT users.id, users.fullname, areas.area, tipo_mobiliario.nombre as 'tipos',
+reporte_mobiliario.marca as 'marca', reporte_mobiliario.modelo as 'modelo',
+reporte_mobiliario.color as 'color' FROM users left join areas on areas.id = users.fk_area
+left join reporte_mobiliario ON users.id = reporte_mobiliario.id left join tipo_mobiliario on 
+tipo_mobiliario.id = reporte_mobiliario.id 
+left join estado on estado.id = tipo_mobiliario.id WHERE username <> 'admin'";
 $resultado = mysqli_query($db, $query);
 // $resultado = $_GET['resultado'] ?? null;
 
@@ -67,7 +72,7 @@ $resultado = mysqli_query($db, $query);
                                     <td>
                                                 
                                         <div class="modal fade" id="staticBackdrop<?php echo $usuarios['id']; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
+                                            <div class="modal-dialog modal-lg">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h1 class="modal-title fs-5" id="staticBackdropLabel">Informacion de <?php echo $usuarios['fullname']; ?></h1>
@@ -79,13 +84,18 @@ $resultado = mysqli_query($db, $query);
                                                                 <thead>
                                                                     <td>Area</td>
                                                                     <td>Nombre</td>
+                                                                    <td>Tipo Mobiliario</td>
+                                                                    <td>Marca</td>
+                                                                    <td>Modelo</td>
+                                                                    <td>Color</td>
                                                                 </thead>
                                                                 <tr>
                                                                     <td><?php echo $usuarios['area']; ?></td>
                                                                     <td><?php echo $usuarios['fullname']; ?></td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                    <td></td>
+                                                                    <td><?php echo $usuarios['tipos']; ?></td>
+                                                                    <td><?php echo $usuarios['marca']; ?></td>
+                                                                    <td><?php echo $usuarios['modelo']; ?></td>
+                                                                    <td><?php echo $usuarios['color']; ?></td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
