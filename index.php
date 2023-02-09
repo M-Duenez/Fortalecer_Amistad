@@ -78,7 +78,7 @@ $resultado = $_GET['resultado'] ?? null;
 </div>      <?php if(intval($resultado) === 1): ?>
                 <?php include 'includes/templates/admin/index.php'; ?>
             <?php elseif(intval($resultado) === 2): ?>
-                <h1>dfdsfs</h1>
+                <?php include 'includes/templates/admin/areas.php'; ?>
         </div>
             <?php endif; ?>
         </div>
