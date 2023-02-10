@@ -35,7 +35,7 @@ $resultado = $_GET['resultado'] ?? null;
             <!--?php include 'includes/templates/header.php'; ?>-->
             <div class="col-sm-auto bg-light sticky-top ">
     <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top ">
-        <h1 class="pt-2  d-none d-sm-inline txt3">MENU</h1>
+        <h1 class="pt-2  d-none d-sm-inline txt3"><b>MENU</b></h1>
         <ul class=" pt-2 nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center justify-content-between w-100 px-3 align-items-center">
             <li class="nav-item">
                 <a href="/?resultado=1" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
